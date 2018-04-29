@@ -4,6 +4,8 @@ class puppet_workstation_install::openbox {
   package {'tint2': ensure  => "installed" }
   package {'x11-apps': ensure  => "installed" }
   package {'rofi': ensure  => "installed" }
+  package {'lightdm': ensure  => "installed" }
+  package {'gdm3': ensure  => "absent" }
 
 
   file {"${::builduserhome}/.config/openbox":
@@ -33,5 +35,23 @@ class puppet_workstation_install::openbox {
     group  => $::builduser,
     source => "puppet:///modules/puppet_workstation_install/openbox/autostart",
   }
+
+  file {"${::builduserhome}/bin/toggletint2.sh":
+    ensure => present,
+    owner  => $::builduser,
+    group  => $::builduser,
+    mode   => "0755",
+    source => "puppet:///modules/puppet_workstation_install/openbox/toggletint2.sh",
+  }
+
+
+  file {"${::builduserhome}/bin/togglexclock.sh":
+    ensure => present,
+    owner  => $::builduser,
+    group  => $::builduser,
+    mode   => "0755",
+    source => "puppet:///modules/puppet_workstation_install/openbox/togglexclock.sh",
+  }
+
 
 }

@@ -9,4 +9,4 @@ fi
 cd $workdir > /dev/null
 git -C $workdir/vim-setup pull || git clone https://github.com/mahnkong/vim-setup.git
 cd vim-setup
-sudo -u <%= @builduser %> ./setup.sh
+sudo -u <%= @builduser %> /bin/bash setup.sh

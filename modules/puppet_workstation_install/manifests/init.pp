@@ -6,6 +6,12 @@ class puppet_workstation_install {
     ensure =>  'directory'
   }
 
+  file {"${::builduserhome}/bin":
+    owner  => $::builduser,
+    group  => $::builduser,
+    ensure =>  'directory'
+  }
+
   file { "${::builduserhome}/environment":
     ensure => 'present',
     owner  => $::builduser,
