@@ -1,6 +1,7 @@
 class puppet_workstation_install::tools {
 
   package {'git': ensure  => "installed" }
+  package {'sshadd': ensure  => "installed" }
   package {'curl': ensure  => "installed" }
   package {'terminator': ensure  => "installed" }
   package {'chromium-browser': ensure  => "installed" }
