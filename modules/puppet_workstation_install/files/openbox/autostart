@@ -1,0 +1,5 @@
+gnome-settings-daemon &
+terminator &
+ssh-add &
+keepass2 &
+chromium-browser &

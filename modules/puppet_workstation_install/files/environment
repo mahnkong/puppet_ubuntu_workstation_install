@@ -1,0 +1,4 @@
+export PATH=$PATH:$HOME/bin
+if [ -f $HOME/custom_environment ]; then
+    source $HOME/custom_environment
+fi
