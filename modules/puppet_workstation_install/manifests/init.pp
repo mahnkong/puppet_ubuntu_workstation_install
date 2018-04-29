@@ -23,4 +23,6 @@ class puppet_workstation_install {
   include puppet_workstation_install::tools
   include puppet_workstation_install::vim
   include puppet_workstation_install::openbox
+  include puppet_workstation_install::ohmyzsh
+  include puppet_workstation_install::keepass2
 }
