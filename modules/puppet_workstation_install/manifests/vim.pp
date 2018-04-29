@@ -11,7 +11,7 @@ class puppet_workstation_install::vim {
   exec {"/bin/bash ${::builddir}/vimsetup.sh":
     refreshonly => true,
     user        => $::builduser,
-    require     => Package['vim-gnome', 'git']
+    require     => Package['vim-gnome', 'git', 'curl']
   }
 
 }
