@@ -1,0 +1,11 @@
+#!/bin/bash
+
+set -e
+
+workdir=<%= @builddir %>
+if [ ! -d "${workdir}" ]; then
+    mkdir $workdir
+fi
+cd $workdir > /dev/null
+curl -fsSL https://raw.github.com/pfn/keepasshttp/master/KeePassHttp.plgx > /usr/share/keepass2/KeePassHttp.plgx
+chmod 644 /usr/share/keepass2/KeePassHttp.plgx
