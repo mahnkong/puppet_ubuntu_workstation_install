@@ -21,6 +21,8 @@ class puppet_workstation_install {
 
   include puppet_workstation_install::backup
   include puppet_workstation_install::tools
+  include puppet_workstation_install::devtools
+  include puppet_workstation_install::docker
   include puppet_workstation_install::vim
   include puppet_workstation_install::openbox
   include puppet_workstation_install::ohmyzsh
