@@ -9,7 +9,9 @@ class puppet_workstation_install::tools {
   package {'chromium-browser': ensure  => "installed" }
   package {'nautilus-dropbox': ensure  => "installed" }
   package {'virtualbox': ensure  => "installed" }
+  package {'gmpc': ensure  => "installed" }
   package {'ack-grep': ensure  => "installed" }
+  package {'net-tools': ensure  => "installed" }
 
   package {'firefox': ensure  => "absent" }
 
