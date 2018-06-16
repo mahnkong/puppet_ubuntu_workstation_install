@@ -9,3 +9,6 @@ fi
 cd $workdir > /dev/null
 curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh > install_ohmyzsh.sh
 sudo -u <%= @builduser %> /bin/bash install_ohmyzsh.sh
+if ! grep -q 'source $HOME/environment' <%= @builduserhome %>/.zshrc; then
+    echo 'source $HOME/environment' >> <%= @builduserhome %>/.zshrc
+fi

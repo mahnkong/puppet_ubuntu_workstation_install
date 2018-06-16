@@ -5,7 +5,6 @@ class puppet_workstation_install::tools {
   package {'ssh-askpass': ensure  => "installed" }
   package {'ssh-askpass-gnome': ensure  => "installed" }
   package {'curl': ensure  => "installed" }
-  package {'terminator': ensure  => "installed" }
   package {'chromium-browser': ensure  => "installed" }
   package {'nautilus-dropbox': ensure  => "installed" }
   package {'virtualbox': ensure  => "installed" }

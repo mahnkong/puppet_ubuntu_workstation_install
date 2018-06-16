@@ -308,7 +308,7 @@
     </keybind>
     <!-- Keybindings for running applications -->
 
-    <keybind key="W-m">
+    <keybind key="W-Return">
       <action name="ToggleMaximize"/>
     </keybind>
 
@@ -325,9 +325,9 @@
       <action name="Execute">
         <startupnotify>
           <enabled>true</enabled>
-          <name>Terminator</name>
+          <name>Tilix</name>
         </startupnotify>
-        <command>terminator</command>
+        <command>tilix</command>
       </action>
     </keybind>
     <keybind key="W-b">
