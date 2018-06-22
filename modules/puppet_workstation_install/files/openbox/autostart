@@ -1,5 +1,5 @@
 gnome-settings-daemon &
-terminator &
+tilix &
 ssh-add &
 keepass2 &
 xscreensaver &
